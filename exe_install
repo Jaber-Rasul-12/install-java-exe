@@ -19,3 +19,19 @@ mvn clean package
 >>   --win-menu-group "Azadi Park" `
 >>   --win-shortcut `
 >>   --icon "C:\Users\gabrr\OneDrive\Documents\NetBeansProjects\azadi_park_new\installer\azadi-park.ico"
+
+jpackage `
+>>   --type exe `
+>>   --name "Azadi Park" `
+>>   --app-version "1.0.0" `
+>>   --vendor "Azadi Park" `
+>>   --description "Azadi Park Desktop Application" `
+>>   --input "target" `
+>>   --main-jar "azadi_park_new-1.0-SNAPSHOT.jar" `
+>>   --main-class "com.mycompany.azadi_park_new.Azadi_park_new" `
+>>   --dest "installer" `
+>>   --win-dir-chooser `
+>>   --win-menu `
+>>   --win-menu-group "Azadi Park" `
+>>   --win-shortcut `
+>>   --icon "installer\azadi-park.ico"
