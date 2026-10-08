@@ -35,3 +35,172 @@ jpackage `
 --win-menu-group "Azadi Park" `
 --win-shortcut `
 --icon "installer\azadi-park.ico"
+
+
+1 cd "C:\Users\gabrr\OneDrive\Documents\NetBeansProjects\SuperMarket"
+2 java -version 
+3 javac -version
+4 mvn -version
+5 install launch4j and  where.exe launch4j.exe 
+6 New-Item -ItemType Directory -Force ".\Output"
+7 & "C:\Program Files (x86)\Launch4j\launch4j.exe"
+8  @'
+>> <?xml version="1.0" encoding="UTF-8"?>
+>> <launch4jConfig>
+>>     <dontWrapJar>false</dontWrapJar>
+>>
+>>     <headerType>gui</headerType>
+>>
+>>     <outfile>Output\SuperMarket.exe</outfile>
+>>
+>>     <jar>Output\app\SuperMarket.jar</jar>
+>>
+>>     <errTitle>SuperMarket</errTitle>
+>>
+>>     <cmdLine></cmdLine>
+>>
+>>     <chdir>.</chdir>
+>>
+>>     <priority>normal</priority>
+>>
+>>     <downloadUrl>https://adoptium.net/temurin/releases/</downloadUrl>
+>>
+>>     <stayAlive>false</stayAlive>
+>>
+>>     <restartOnCrash>false</restartOnCrash>
+>>
+>>     <customProcName>false</customProcName>
+>>
+>>     <icon>Output\app\icon.ico</icon>
+>>
+>>     <jre>
+>>         <path></path>
+>>         <minVersion>21</minVersion>
+>>         <maxVersion></maxVersion>
+>>         <jdkPreference>preferJre</jdkPreference>
+>>         <runtimeBits>64</runtimeBits>
+>>     </jre>
+>>
+>>     <versionInfo>
+>>         <fileVersion>1.0.0.0</fileVersion>
+>>         <txtFileVersion>1.0.0</txtFileVersion>
+>>         <fileDescription>SuperMarket</fileDescription>
+>>         <copyright>SuperMarket</copyright>
+>>         <productVersion>1.0.0.0</productVersion>
+>>         <txtProductVersion>1.0.0</txtProductVersion>
+>>         <productName>SuperMarket</productName>
+>>         <companyName>SuperMarket</companyName>
+>>         <internalName>SuperMarket</internalName>
+>>         <originalFilename>SuperMarket.exe</originalFilename>
+>>     </versionInfo>
+>> </launch4jConfig>
+>> '@ | Set-Content -Encoding UTF8 ".\supermarket-launch4j.xml"
+PS C:\WINDOWS\system32> @'
+>> <?xml version="1.0" encoding="UTF-8"?>
+>> <launch4jConfig>
+>>     <dontWrapJar>false</dontWrapJar>
+>>
+>>     <headerType>gui</headerType>
+>>
+>>     <outfile>Output\SuperMarket.exe</outfile>
+>>
+>>     <jar>Output\app\SuperMarket.jar</jar>
+>>
+>>     <errTitle>SuperMarket</errTitle>
+>>
+>>     <cmdLine></cmdLine>
+>>
+>>     <chdir>.</chdir>
+>>
+>>     <priority>normal</priority>
+>>
+>>     <downloadUrl>https://adoptium.net/temurin/releases/</downloadUrl>
+>>
+>>     <stayAlive>false</stayAlive>
+>>
+>>     <restartOnCrash>false</restartOnCrash>
+>>
+>>     <customProcName>false</customProcName>
+>>
+>>     <icon>Output\app\icon.ico</icon>
+>>
+>>     <jre>
+>>         <path></path>
+>>         <minVersion>21</minVersion>
+>>         <maxVersion></maxVersion>
+>>         <jdkPreference>preferJre</jdkPreference>
+>>         <runtimeBits>64</runtimeBits>
+>>     </jre>
+>>
+>>     <versionInfo>
+>>         <fileVersion>1.0.0.0</fileVersion>
+>>         <txtFileVersion>1.0.0</txtFileVersion>
+>>         <fileDescription>SuperMarket</fileDescription>
+>>         <copyright>SuperMarket</copyright>
+>>         <productVersion>1.0.0.0</productVersion>
+>>         <txtProductVersion>1.0.0</txtProductVersion>
+>>         <productName>SuperMarket</productName>
+>>         <companyName>SuperMarket</companyName>
+>>         <internalName>SuperMarket</internalName>
+>>         <originalFilename>SuperMarket.exe</originalFilename>
+>>     </versionInfo>
+>> </launch4jConfig>
+>> '@ | Set-Content -Encoding UTF8 ".\supermarket-launch4j.xml"
+PS C:\WINDOWS\system32> @'
+>> <?xml version="1.0" encoding="UTF-8"?>
+>> <launch4jConfig>
+>>     <dontWrapJar>false</dontWrapJar>
+>>
+>>     <headerType>gui</headerType>
+>>
+>>     <outfile>Output\SuperMarket.exe</outfile>
+>>
+>>     <jar>Output\app\SuperMarket.jar</jar>
+>>
+>>     <errTitle>SuperMarket</errTitle>
+>>
+>>     <cmdLine></cmdLine>
+>>
+>>     <chdir>.</chdir>
+>>
+>>     <priority>normal</priority>
+>>
+>>     <downloadUrl>https://adoptium.net/temurin/releases/</downloadUrl>
+>>
+>>     <stayAlive>false</stayAlive>
+>>
+>>     <restartOnCrash>false</restartOnCrash>
+>>
+>>     <customProcName>false</customProcName>
+>>
+>>     <icon>Output\app\icon.ico</icon>
+>>
+>>     <jre>
+>>         <path></path>
+>>         <minVersion>21</minVersion>
+>>         <maxVersion></maxVersion>
+>>         <jdkPreference>preferJre</jdkPreference>
+>>         <runtimeBits>64</runtimeBits>
+>>     </jre>
+>>
+>>     <versionInfo>
+>>         <fileVersion>1.0.0.0</fileVersion>
+>>         <txtFileVersion>1.0.0</txtFileVersion>
+>>         <fileDescription>SuperMarket</fileDescription>
+>>         <copyright>SuperMarket</copyright>
+>>         <productVersion>1.0.0.0</productVersion>
+>>         <txtProductVersion>1.0.0</txtProductVersion>
+>>         <productName>SuperMarket</productName>
+>>         <companyName>SuperMarket</companyName>
+>>         <internalName>SuperMarket</internalName>
+>>         <originalFilename>SuperMarket.exe</originalFilename>
+>>     </versionInfo>
+>> </launch4jConfig>
+>> '@ | Set-Content -Encoding UTF8 ".\supermarket-launch4j.xml"
+
+9 New-Item -ItemType Directory -Force ".\Output\app"
+10 mvn clean package
+11 Copy-Item ".\target\SuperMarket-Full.jar" ".\Output\app\SuperMarket.jar" -Force
+12 & "C:\Program Files (x86)\Launch4j\launch4jc.exe" ".\supermarket-launch4j.xml"
+13 install inno setup compiler 
+14 add jar from output/app .jar and setup form output .exe 
